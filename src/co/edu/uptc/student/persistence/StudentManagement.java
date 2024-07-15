@@ -29,11 +29,11 @@ public class StudentManagement extends FilePlain implements IActionFile {
     private List<Student> students;
 
     private static StudentManagement instance;
-    private List<Student> listStudents;
+    
 
-    // Constructor privado para evitar la creación de nuevas instancias
+   
     private StudentManagement() {
-        listStudents = new ArrayList<>();
+        students = new ArrayList<>();
     }
 
     // Método estático para obtener la única instancia de la clase

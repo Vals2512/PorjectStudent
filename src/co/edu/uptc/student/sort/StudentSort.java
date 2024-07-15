@@ -1,17 +1,16 @@
 package co.edu.uptc.student.sort;
 
-import co.edu.uptc.student.enums.ETypeFile;
 import co.edu.uptc.student.model.Student;
-import co.edu.uptc.student.persistence.StudentManagement;
+
 
 import java.util.List;
 
 public class StudentSort {
-    
-	 private StudentManagement sm = StudentManagement.getInstance();
+	
+	  
 
-    public void sortByCodigoAscendente(List<Student> students) {
-    	
+    public List<Student> sortByCodigoAscendente(List<Student> students) {
+
         int n = students.size();
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
@@ -23,10 +22,10 @@ public class StudentSort {
                 }
             }
         }
+        return students;
     }
 
-    public void sortByCodigoDescendente(List<Student> students) {
-        sm.loadFile(ETypeFile.TXT);
+    public List<Student> sortByCodigoDescendente(List<Student> students) {
         int n = students.size();
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
@@ -38,10 +37,10 @@ public class StudentSort {
                 }
             }
         }
+        return students;
     }
 
-    public void sortByNameAscendenteInsertion(List<Student> students) {
-        sm.loadFile(ETypeFile.TXT);
+    public List<Student> sortByNameAscendenteInsertion(List<Student> students) {
         int n = students.size();
         for (int i = 1; i < n; ++i) {
             Student key = students.get(i);
@@ -56,10 +55,10 @@ public class StudentSort {
             }
             students.set(j + 1, key);
         }
+        return students;
     }
 
-    public void sortByNameDescendenteInsertion(List<Student> students) {
-        sm.loadFile(ETypeFile.TXT);
+    public List<Student> sortByNameDescendenteInsertion(List<Student> students) {
         int n = students.size();
         for (int i = 1; i < n; ++i) {
             Student key = students.get(i);
@@ -71,10 +70,10 @@ public class StudentSort {
             }
             students.set(j + 1, key);
         }
+        return students;
     }
 
-    public void sortByLastNameAscendente(List<Student> students) {
-        sm.loadFile(ETypeFile.TXT);
+    public List<Student> sortByLastNameAscendente(List<Student> students) {
         int n = students.size();
         for (int i = 0; i < n - 1; i++) {
             // Encontrar el índice del elemento mínimo
@@ -89,11 +88,10 @@ public class StudentSort {
             students.set(minIndex, students.get(i));
             students.set(i, temp);
         }
+        return students;
     }
 
-    public void sortByLastNameDescendente(List<Student> students) {
-        sm.loadFile(ETypeFile.TXT);
-
+    public List<Student> sortByLastNameDescendente(List<Student> students) {
         int n = students.size();
         for (int i = 0; i < n - 1; i++) {
             // Encontrar el índice del elemento máximo
@@ -108,5 +106,7 @@ public class StudentSort {
             students.set(maxIndex, students.get(i));
             students.set(i, temp);
         }
+        return students;
     }
 }
+

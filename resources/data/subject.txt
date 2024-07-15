@@ -1,1 +1,1 @@
-1;Algebra;4
+1;algebra;3;123

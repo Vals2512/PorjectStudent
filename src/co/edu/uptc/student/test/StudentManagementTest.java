@@ -13,7 +13,7 @@ import co.edu.uptc.student.model.Student;
 import co.edu.uptc.student.persistence.StudentManagement;
 
 public class StudentManagementTest {
-    private StudentManagement sm = new StudentManagement();
+    StudentManagement sm = (StudentManagement) StudentManagement.getInstance().getStudents();
 
     private void escenarieTXT() {
         sm.addStudent(new Student("1", "Juan", "Perez", "123", "Systems", "juan.perez@uptc.edu.co"));

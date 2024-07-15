@@ -54,43 +54,46 @@ public class ManagementKeyEvents implements KeyListener {
 		}
 		if(isControlPressed == true && isAPressed && isOnePressed==true) {
 			loadData();
+			
 			List<Student> students = studentManagement.getStudents();
-			ss.sortByCodigoDescendente(students);
-			actualizarInterfaz(students);
+		
+			List<Student> stu =ss.sortByCodigoDescendente(students);
+		
+			actualizarInterfaz(stu);
 		}
 		if(isControlPressed == true && isAPressed && isTwoPressed==true) {
 			loadData();
 			List<Student> students = studentManagement.getStudents();
-            ss.sortByCodigoAscendente(students);
-            actualizarInterfaz(students);
+            List<Student> stu = ss.sortByCodigoAscendente(students);
+            actualizarInterfaz(stu);
 		
 	}
 		if(isControlPressed == true && isBPressed && isOnePressed==true) {
 			loadData();
 			List<Student> students = studentManagement.getStudents();
-            ss.sortByNameDescendenteInsertion(students);
-             actualizarInterfaz(students);
+			List<Student> stu = ss.sortByNameDescendenteInsertion(students);
+            actualizarInterfaz(stu);
 		}
 		
 		if(isControlPressed == true && isBPressed && isTwoPressed==true) {
 			loadData();
 			List<Student> students = studentManagement.getStudents();
-             ss.sortByNameAscendenteInsertion(students);
-              actualizarInterfaz(students);
+			List<Student> stu =  ss.sortByNameAscendenteInsertion(students);
+              actualizarInterfaz(stu);
 		}
 		
 		if(isControlPressed == true && isCPressed && isOnePressed==true) {
 			loadData();
 			List<Student> students = studentManagement.getStudents();
-             ss.sortByLastNameDescendente(students);
-             actualizarInterfaz(students);
+			List<Student> stu =  ss.sortByLastNameDescendente(students);
+             actualizarInterfaz(stu);
 		}
 		
 		if(isControlPressed == true && isCPressed && isTwoPressed==true) {
 			loadData();
 			List<Student> students = studentManagement.getStudents();
-            ss.sortByLastNameAscendente(students);
-            actualizarInterfaz(students);
+			List<Student> stu =  ss.sortByLastNameAscendente(students);
+            actualizarInterfaz(stu);
 			
 		}
 		
@@ -124,9 +127,9 @@ public class ManagementKeyEvents implements KeyListener {
 	private void loadData() {
 		studentManagement.setListStudents(new ArrayList<>());
 		studentManagement.loadFile(ETypeFile.TXT);
-		studentManagement.loadFile(ETypeFile.CSV);
-		studentManagement.loadFile(ETypeFile.JSON);
 		studentManagement.loadFile(ETypeFile.XML);
+		studentManagement.loadFile(ETypeFile.JSON);
+		studentManagement.loadFile(ETypeFile.CSV);
 		studentManagement.loadFile(ETypeFile.SERIALIZATE);
 		
 	}

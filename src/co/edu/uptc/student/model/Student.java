@@ -16,8 +16,7 @@ public class Student implements Serializable {
     private String code;
     private String career;
     private String email;
-    private String codeSub;
-    private Subject subject;
+    
 
     public Student() {
     }

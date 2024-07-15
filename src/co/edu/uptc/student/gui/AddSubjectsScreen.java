@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 
 import co.edu.uptc.student.enums.ETypeFile;
 import co.edu.uptc.student.model.Subject;
+import co.edu.uptc.student.persistence.StudentManagement;
 import co.edu.uptc.student.persistence.SubjectManagement;
 
 public class AddSubjectsScreen extends JFrame {
@@ -25,13 +26,18 @@ public class AddSubjectsScreen extends JFrame {
     private JLabel labelName;
     private JLabel labelNumberCredits;
     private JLabel labelSubject;
+    
+    private JLabel labelCodeStudent;
 
     private JTextField txtCodeSubjetc;
     private JTextField txtName;
     private JTextField txtNumberCredits;
+    private JTextField txtCodeStudent;
 
     private JButton buttonAdd;
     private JButton buttonCancel;
+    
+    private StudentManagement sm = StudentManagement.getInstance();
 
     public AddSubjectsScreen(SubjectManagement subjectManagement) {
         this.subjectManagement = subjectManagement;
@@ -57,6 +63,7 @@ public class AddSubjectsScreen extends JFrame {
         this.labelCodeSubject = new JLabel("Code Subject");
         this.labelName = new JLabel("Name");
         this.labelNumberCredits = new JLabel("Credit´s number");
+        this.labelCodeStudent = new JLabel("Code Student");
 
         Font boldFont = new Font("Times", Font.BOLD, 40);
         this.labelSubject.setFont(boldFont);
@@ -65,10 +72,12 @@ public class AddSubjectsScreen extends JFrame {
         this.labelCodeSubject.setFont(boldFont2);
         this.labelName.setFont(boldFont2);
         this.labelNumberCredits.setFont(boldFont2);
+        this.labelCodeStudent.setFont(boldFont2);
 
         this.txtCodeSubjetc = new JTextField(20);
         this.txtName = new JTextField(20);
         this.txtNumberCredits = new JTextField(20);
+        this.txtCodeStudent = new JTextField(20);
 
         this.buttonAdd = new JButton("Add");
         this.buttonCancel = new JButton("Cancel");
@@ -125,6 +134,19 @@ public class AddSubjectsScreen extends JFrame {
         gbc.gridy = 3;
         gbc.gridwidth = 2;
         this.add(txtNumberCredits, gbc);
+        
+        // Inserción del label Code student
+        gbc.gridx = 0;
+        gbc.gridy = 4;
+        gbc.gridwidth = 1;
+        this.add(labelCodeStudent, gbc);
+        
+        // Inserción del input code Student
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        gbc.gridwidth = 2;
+        this.add(txtCodeStudent, gbc);
+        
 
         // Inserción del botón "Cancelar"
         gbc.gridx = 1;
@@ -146,9 +168,12 @@ public class AddSubjectsScreen extends JFrame {
         buttonAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Subject subject = new Subject(txtCodeSubjetc.getText(), txtName.getText(), txtNumberCredits.getText());
+            
+             
+            	
+                Subject subject = new Subject(txtCodeSubjetc.getText(), txtName.getText(), txtNumberCredits.getText(), txtCodeStudent.getText());
 
-                // Cargar objetos Subject existentes}
+             // Cargar objetos Subject existentes}
                 subjectManagement.loadFile(ETypeFile.TXT);
                 subjectManagement.loadFile(ETypeFile.XML);
                 subjectManagement.loadFile(ETypeFile.JSON);

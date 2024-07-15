@@ -107,7 +107,7 @@ public class ManagementEventsStudent implements ActionListener {
                 this.subm.loadFile(ETypeFile.TXT);
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(), subject.getNumberCredits()
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(), subject.getNumberCredits()
                     };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -135,7 +135,7 @@ public class ManagementEventsStudent implements ActionListener {
                 this.subm.loadFile(ETypeFile.XML);
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(), subject.getNumberCredits()
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(), subject.getNumberCredits()
                     };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -162,7 +162,7 @@ public class ManagementEventsStudent implements ActionListener {
                 this.subm.loadFile(ETypeFile.JSON);
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(), subject.getNumberCredits()
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(), subject.getNumberCredits()
                     };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -190,7 +190,7 @@ public class ManagementEventsStudent implements ActionListener {
                 this.subm.loadFile(ETypeFile.CSV);
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(), subject.getNumberCredits()
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(), subject.getNumberCredits()
                     };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -219,7 +219,7 @@ public class ManagementEventsStudent implements ActionListener {
                 this.subm.loadFile(ETypeFile.SERIALIZATE);
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(), subject.getNumberCredits()
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(), subject.getNumberCredits()
                     };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -391,7 +391,7 @@ public class ManagementEventsStudent implements ActionListener {
                 // Actualizar la tabla en la interfaz de usuario
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(),
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(),
                             subject.getNumberCredits() };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -407,7 +407,7 @@ public class ManagementEventsStudent implements ActionListener {
                 // Actualizar la tabla en la interfaz de usuario
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(),
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(),
                             subject.getNumberCredits() };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -422,7 +422,7 @@ public class ManagementEventsStudent implements ActionListener {
                 // Actualizar la tabla en la interfaz de usuario
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(),
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(),
                             subject.getNumberCredits() };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -437,7 +437,7 @@ public class ManagementEventsStudent implements ActionListener {
                 // Actualizar la tabla en la interfaz de usuario
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(),
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(),
                             subject.getNumberCredits() };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -452,7 +452,7 @@ public class ManagementEventsStudent implements ActionListener {
                 // Actualizar la tabla en la interfaz de usuario
                 this.clearTable();
                 this.subm.getSubjects().forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(),
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(),
                             subject.getNumberCredits() };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
@@ -487,7 +487,7 @@ public class ManagementEventsStudent implements ActionListener {
                         .filter(subject -> subject.getName().equalsIgnoreCase(nameSub))
                         .collect(Collectors.toList());
                 listSubjectsAux.forEach(subject -> {
-                    Object[] row = new Object[] { subject.getCode(), subject.getName(), subject.getNumberCredits() };
+                    Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(), subject.getNumberCredits() };
                     this.principalscreen.getPanelMiddle().addRow(row);
                 });
 
@@ -517,7 +517,7 @@ public class ManagementEventsStudent implements ActionListener {
                     // Actualizar la tabla en la interfaz de usuario
                     this.clearTable();
                     this.subm.getSubjects().forEach(subject -> {
-                        Object[] row = new Object[] { subject.getCode(), subject.getName(),
+                        Object[] row = new Object[] { subject.getCodeSubject(), subject.getName(),
                                 subject.getNumberCredits() };
                         this.principalscreen.getPanelMiddle().addRow(row);
                     });

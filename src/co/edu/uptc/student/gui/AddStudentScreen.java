@@ -21,7 +21,7 @@ import java.awt.event.ActionListener;
 public class AddStudentScreen extends JFrame {
     private static final long serialVersionUID = 1L;
 
-    StudentManagement studentManagement;
+
     private JLabel labelStudentID;
     private JLabel labelName;
     private JLabel labelLastname;
@@ -201,11 +201,11 @@ public class AddStudentScreen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Cargar la lista existente de estudiantes desde los archivos
-                studentManagement.loadFile(ETypeFile.TXT);
-                studentManagement.loadFile(ETypeFile.XML);
-                studentManagement.loadFile(ETypeFile.JSON);
-                studentManagement.loadFile(ETypeFile.CSV);
-                studentManagement.loadFile(ETypeFile.SERIALIZATE);
+                sm.loadFile(ETypeFile.TXT);
+                sm.loadFile(ETypeFile.XML);
+                sm.loadFile(ETypeFile.JSON);
+                sm.loadFile(ETypeFile.CSV);
+                sm.loadFile(ETypeFile.SERIALIZATE);
 
                 Student student = new Student(
                         txtStudentId.getText(),
@@ -215,14 +215,14 @@ public class AddStudentScreen extends JFrame {
                         txtCareer.getText(),
                         txtEmail.getText());
 
-                if (studentManagement.addStudent(student)) {
+                if (sm.addStudent(student)) {
                     // Guardar la lista completa de estudiantes después de agregar el nuevo
                     // estudiante
-                    studentManagement.dumpFile(ETypeFile.TXT);
-                    studentManagement.dumpFile(ETypeFile.XML);
-                    studentManagement.dumpFile(ETypeFile.JSON);
-                    studentManagement.dumpFile(ETypeFile.CSV);
-                    studentManagement.dumpFile(ETypeFile.SERIALIZATE);
+                    sm.dumpFile(ETypeFile.TXT);
+                    sm.dumpFile(ETypeFile.XML);
+                    sm.dumpFile(ETypeFile.JSON);
+                    sm.dumpFile(ETypeFile.CSV);
+                    sm.dumpFile(ETypeFile.SERIALIZATE);
 
                     JOptionPane.showMessageDialog(null, "Student added successfully!");
                 } else {

@@ -12,25 +12,38 @@ public class Subject implements Serializable {
 	private String codeSubject;
     private String name;
     private String numberCredits;
+    private String codeStudent;
 
     public Subject() {
     }
 
-    public Subject(String code, String name, String numberCredits) {
+    public Subject(String codeSubject, String name, String numberCredits, String codeStu) {
 
-        this.codeSubject = code;
+        this.codeSubject = codeSubject;
         this.name = name;
         this.numberCredits = numberCredits;
+        this.codeStudent= codeStu;
     }
+    
+   
+    
+    
 
-    public String getCode() {
-        return codeSubject;
-    }
+    public String getCodeSubject() {
+		return codeSubject;
+	}
 
-    public void setCode(String code) {
-        this.codeSubject = code;
-    }
+	public String getCodeStudent() {
+		return codeStudent;
+	}
 
+	public void setCodeSubject(String codeSubject) {
+		this.codeSubject = codeSubject;
+	}
+
+	public void setCodeStudent(String codeStudent) {
+		this.codeStudent = codeStudent;
+	}
     public String getName() {
         return name;
     }
