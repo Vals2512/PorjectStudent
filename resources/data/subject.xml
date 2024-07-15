@@ -1,0 +1,12 @@
+<XML version="1.0" encoding="UTF-8"> 
+<subject>
+<code>2</code>
+<name>Algebra</name>
+<credits>4</credits>
+</subject>
+<subject>
+<code>3</code>
+<name>Calculo</name>
+<credits>3</credits>
+</subject>
+</XML>

@@ -1,0 +1,26 @@
+[
+{
+"id" : "1", 
+"name" : "Juan", 
+"lastName" : "Perez", 
+"code" : "123", 
+"career" : "Systems", 
+"email" : "juan.perez@uptc.edu.co" 
+},
+{
+"id" : "2", 
+"name" : "Pedro", 
+"lastName" : "Gomez", 
+"code" : "456", 
+"career" : "Industrial", 
+"email" : "pedro.gomez@uptc.edu.co" 
+},
+{
+"id" : "4", 
+"name" : "Pepito", 
+"lastName" : "Velandia", 
+"code" : "1011", 
+"career" : "Minas", 
+"email" : "pepito.perez@uptc.edu.co" 
+}
+]

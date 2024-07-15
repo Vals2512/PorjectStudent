@@ -1,0 +1,17 @@
+[
+{
+"code" : "4", 
+"name" : "Algebra", 
+"credits" : "4" 
+}, 
+{
+"code" : "5", 
+"name" : "Calculo", 
+"credits" : "3" 
+}, 
+{
+"code" : "6", 
+"name" : "Fisica", 
+"credits" : "4" 
+}
+]

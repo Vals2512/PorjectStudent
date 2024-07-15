@@ -1,0 +1,3 @@
+2;Juan;Perez;123;Systems;juan.perez@uptc.edu.co
+3;Pedro;Gomez;456;Industrial;pedro.gomez@uptc.edu.co
+1;Maria;Rodriguez;789;Civil;maria.rodriguez@uptc.edu.co

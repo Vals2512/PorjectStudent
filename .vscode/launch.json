@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "co.edu.uptc.student.runner.App",
+            "projectName": "Student project_b8c76f67"
+        },
+        {
+            "type": "java",
+            "name": "PrincipalScreen",
+            "request": "launch",
+            "mainClass": "co.edu.uptc.student.gui.PrincipalScreen",
+            "projectName": "Student project_b8c76f67"
+        },
+        {
+            "type": "java",
+            "name": "Launch",
+            "request": "launch",
+            "mainClass": "${fileBasename}"
+        }
+    ]
+}
